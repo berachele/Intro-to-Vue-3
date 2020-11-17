@@ -19,6 +19,7 @@ app.component('product-display', {
         <p v-else>Out of Stock</p>
 
         <p>Shipping: {{ shipping }}</p>
+
         <ul>
           <li v-for="detail in details">{{ detail }}</li>
         </ul>
@@ -30,7 +31,7 @@ app.component('product-display', {
           class="color-circle" 
           :style="{ backgroundColor: variant.color }">
         </div>
-        
+
         <button 
           class="button" 
           :class="{ disabledButton: !inStock }" 
@@ -44,6 +45,7 @@ app.component('product-display', {
     <review-list v-if="reviews.length" :reviews="reviews"></review-list>
     <review-form @review-submitted="addReview"></review-form>
   </div>`,
+
   data() {
     return {
         product: 'Socks',
