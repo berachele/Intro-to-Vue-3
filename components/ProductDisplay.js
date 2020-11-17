@@ -31,7 +31,7 @@ app.component('product-display', {
           class="color-circle" 
           :style="{ backgroundColor: variant.color }">
         </div>
-        
+
         <button 
           class="button" 
           :class="{ disabledButton: !inStock }" 
@@ -42,6 +42,7 @@ app.component('product-display', {
       </div>
     </div>
   </div>`,
+
   data() {
     return {
         product: 'Socks',
